@@ -64,15 +64,27 @@ void print(vvi & v)
 }
 
 void solve() {
-    
-    int n ; cin >>n; 
-    int m ; cin >>m;
-    
-
+    int n ; cin >>n ;
+    if (  n == 2|| n== 3 ) {
+        cout << "NO SOLUTION" <<endl ;
+        return ; 
+    }
+    if ( n== 4) {
+        cout << 2 << " " << 4 << " " <<1 << " " <<3 <<endl ;
+        return ;
+    }
+    for (int i = 1;i <= n; i+=2) {
+        cout << i << " ";
+    }
+    for (int i = 2; i<= n; i+=2) {
+        cout << i << " "; 
+    }
+    cout <<endl ;
+        
 
 }
 int32_t main(){
     I_am_speed();
-   solve() ;
+    solve() ;
     return 0;
 }

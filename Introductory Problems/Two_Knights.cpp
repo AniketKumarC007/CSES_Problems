@@ -63,16 +63,26 @@ void print(vvi & v)
    return;
 }
 
+int f (int n ) {
+
+    int total = ((n*n) * (n*n-1))/2 ;
+
+    // avoiding all the 2*3 and 3*2 blocks -> 2 blocked in 2*3 and 2 in 3*2
+
+    int to_be_removed = 4 * (n-3+1) *(n-2+1) ;
+
+    return total - to_be_removed ;
+}
 void solve() {
     
-    int n ; cin >>n; 
-    int m ; cin >>m;
-    
-
+    int n ; cin >>n ;
+    for (int i = 1;i <= n; i++) {
+        cout <<f (i) <<endl ;
+    }
 
 }
 int32_t main(){
     I_am_speed();
-   solve() ;
+    solve() ;
     return 0;
 }

@@ -65,14 +65,18 @@ void print(vvi & v)
 
 void solve() {
     
-    int n ; cin >>n; 
-    int m ; cin >>m;
-    
-
+        
 
 }
 int32_t main(){
     I_am_speed();
-   solve() ;
+    int t ; cin>>t;
+    int sum = (t * (t+1))/2;
+    int x;
+    loop ( i , 0, t-1) {
+        cin >>x ;
+        sum -= x;
+    }
+    cout <<sum << endl ;
     return 0;
 }

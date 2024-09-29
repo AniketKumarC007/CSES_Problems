@@ -64,15 +64,36 @@ void print(vvi & v)
 }
 
 void solve() {
+    string s; cin >>s ; 
+    int n = s.length() ;
+    int maxi  = 1 ; 
     
-    int n ; cin >>n; 
-    int m ; cin >>m;
-    
+    int j = 1; 
+    int count = 1;
+    while (j <n) {
+        if (s[j] == s[j-1]) {
 
+            while (j <n && (s[j] == s[j-1])) {
+                
+                count++;
+                // cout << count << " "  << j <<endl ;
+                j++;
 
+            }
+            // cout << "HERE " <<endl ;
+            maxi = max (maxi , count) ;
+        }
+        else{
+            j++;
+            count =1 ;
+        }
+       
+    }
+        
+    cout <<maxi  <<endl ;
 }
 int32_t main(){
     I_am_speed();
-   solve() ;
+    solve() ;
     return 0;
 }

@@ -63,12 +63,30 @@ void print(vvi & v)
    return;
 }
 
+vvi ans  ;
+
+void f (int n , int start , int auxi , int end) {
+    if ( n== 1) {
+        // cout << start << " " <<end <<endl ;
+        ans.push_back( {start , end}) ;
+        return ;
+    }
+
+    // use c as auxi and move n-1 from a to b 
+
+    f(n-1 , start , end , auxi ) ;
+    // cout << start <<" " << end  <<endl ;
+    ans.push_back({start , end}) ;
+    f(n-1, auxi , start , end) ;
+
+    return ;
+}
 void solve() {
     
-    int n ; cin >>n; 
-    int m ; cin >>m;
-    
-
+    int n ; cin >>n ;
+    f(n , 1, 2, 3) ;
+    cout <<ans.size() <<endl ;
+    print (ans) ;
 
 }
 int32_t main(){

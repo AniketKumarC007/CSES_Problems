@@ -65,14 +65,17 @@ void print(vvi & v)
 
 void solve() {
     
-    int n ; cin >>n; 
-    int m ; cin >>m;
-    
+    int n ; cin >>n ;
+    int s = 1<<n ;
+    cout <<s <<endl ;
 
+    s = 14 ;
+  s=  s ^ (s >> 1); 
+    cout <<s <<endl ;
 
 }
 int32_t main(){
     I_am_speed();
-   solve() ;
+    solve() ;
     return 0;
 }

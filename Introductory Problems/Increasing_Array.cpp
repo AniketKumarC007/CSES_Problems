@@ -65,14 +65,20 @@ void print(vvi & v)
 
 void solve() {
     
-    int n ; cin >>n; 
-    int m ; cin >>m;
-    
-
+        
+    int n ; cin >>n ;
+    vi v (n) ;
+    loop ( i , 0, n) cin >>v[i] ;
+    int ans = 0 ;
+    for (int i  =1; i <n ; i++) {
+        ans += max(v[i-1] - v[i] ,1ll* 0) ;
+        v[i] = max(v[i] , v[i-1]) ;
+    }
+    cout <<ans << endl ;
 
 }
 int32_t main(){
     I_am_speed();
-   solve() ;
+    solve() ;
     return 0;
 }

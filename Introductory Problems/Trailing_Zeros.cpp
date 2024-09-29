@@ -65,14 +65,24 @@ void print(vvi & v)
 
 void solve() {
     
-    int n ; cin >>n; 
-    int m ; cin >>m;
-    
-
+        
 
 }
 int32_t main(){
     I_am_speed();
-   solve() ;
+    int n ; cin >>n ;
+    int a = 5 ;
+    int ans = 0 ; 
+   
+    while (n/a >0) {
+        ans += n/a;
+        a *= 5 ;
+    }
+     int count = 0;
+
+    
+   
+    cout <<ans <<endl ;
+    
     return 0;
 }
